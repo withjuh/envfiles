@@ -1,0 +1,36 @@
+# colored ls output
+export CLICOLOR=1
+
+# use grey for directories
+#export LSCOLORS=hafxcxdxbxegedabagacad
+
+# use yellow for directories
+#export LSCOLORS=dxfxcxdxbxegedabagacad
+
+# prompt format: (yellow) [user@hostname working_directory]$
+#export PS1="\[\e[0;33m\][\\u@\h \\w]\\$ \[\e[m\]"
+
+# cyan prompt
+#export PS1="\[\e[0;36m\][\\u@\h \\w]\\$ \[\e[m\]"
+
+# prompt:
+#  [cyan]username@hostname[textcolor]:[bold-blue]workingdirectory[textcolor]$
+export PS1='\[\033[0;36m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+export PATH=$HOME/bin:$PATH
+
+# no hidden files matched when hitting TAB key
+bind 'set match-hidden-files off'
+
+# grep color: purple
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+export GREP_COLOR='0;35'
+
+# history length
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+#alias python='python3' # causes problems with virtualenv
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
